@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect  } from 'react-router-dom';
+import { Route, Switch, Navigate  } from 'react-router-dom';
 import Home from "./views/Home/Home";
 import NotFound from "./views/NotFound";
 import NavBar from "./components/Header/NavBar";
@@ -11,7 +11,7 @@ const App = () => {
       <Switch>
         <Route exact path="/Home" component={Home} />
         <Route exact path="/">
-          <Redirect to="/Home" />
+          <Navigate to="/Home" />
         </Route>
         <Route component={NotFound}/>
       </Switch>

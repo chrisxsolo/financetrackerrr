@@ -1,0 +1,19 @@
+{
+  "name": "financetrackerrr",
+  "version": "1.0.0",
+  "description": "It comprises of `MongoDB`, `Express`, `React` and `Node`. <br><br> Of which `React` is used for **front-end development** <br> And `MongoDB`, `Express`, `Node` for **back-end development**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-all": "concurrently \"npm install\" \"cd client && npm install\"",
+    "client": "cd client && npm start",
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"nodemon server/server.js\" \"cd client && npm run start\"",
+    "build": "cd client && npm build",
+    "start": "node server/server.js",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

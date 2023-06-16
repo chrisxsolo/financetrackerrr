@@ -2,6 +2,9 @@
   "name": "financetrackerrr",
   "version": "1.0.0",
   "description": "It comprises of `MongoDB`, `Express`, `React` and `Node`. <br><br> Of which `React` is used for **front-end development** <br> And `MongoDB`, `Express`, `Node` for **back-end development**",
+  "engines": {
+    "node": "16.17.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

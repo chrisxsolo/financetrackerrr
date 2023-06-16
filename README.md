@@ -1,74 +1,48 @@
-## _**PLEASE READ THIS TO COMPLETION BEFORE ASKING ANY QUESTIONS!**_
-
-### _**IMPORTANT NOTES**_ - 
-This project does not have a mongoDB connection setup. Setup the connection based on the environments below.
-- local development: create a config file (make sure to name it config.js) in the config folder, which exports your db.uri connection. An example is provided, config/config.example.js. This file will be ignored by git so your db credentials will be kept safe when the app is deployed.
-- production: Since the config file is not pushed when you deploy your app, you must specifiy your db uri in heorku. Set the uri in heroku as specified in [this](https://devcenter.heroku.com/articles/config-vars) resource. Make sure you name the environement variable "DB_URI".
-
-This project contains an example project board meant to showcase how one can be used. The issues posted to it are not real issues.
+# MERN Basics
+### [YouTube Link](https://www.youtube.com/watch?v=I7EDAR2GRVo)
+It comprises of `MongoDB`, `Express`, `React` and `Node`. <br><br>
+Of which `React` is used for **front-end development** <br>
+And `MongoDB`, `Express`, `Node` for **back-end development**
 
 ## Getting Started
-This repository aims to assist you in beginning work on a MERN stack application for heroku deployment with a solid file structure as a foundation. To get started make a copy of this template repo for your project teams by clicking the green "Use this template" button above.
+### Follow these steps while starting the project
 
-Since this project will hold both the client application and the server application there will be node modules in two different places. First run `npm install` from the root. After this you will run `npm run-script install-all` from the root. From now on run this command anytime you want to install all modules again. This is a script we have defined in package.json. Alternatively your group may choose to simplify this process by using yarn workspaces as specified [here](https://yarnpkg.com/lang/en/docs/workspaces/).
+###### 1.  Create two Folders
 
-This app can be deployed directly to heroku since there is a script defined in package.json which will automatically handle building and deploying the app. For more information on deploying to heroku reference the extra resources at the bottom of this file. 
+    Server (This contains all the back-end part)
+  
+    Client (This contains all the front-end part)
+  
+###### 2.  Getting MongoDB Connection
 
+    Open Connect and click on - Connect your Application
+    
+  ![image](https://user-images.githubusercontent.com/76637730/174515425-a6b7db82-5cd3-4cc3-9b27-ecad8e395983.png)
+  
+    Copy and Add your connection string into your application code
+    
+  ![image](https://user-images.githubusercontent.com/76637730/174516230-232c6be6-d00b-4067-b15e-1f9cf9c57784.png)
 
-## Available Scripts
+  
+###### 3.  SERVER
 
-Please note that any time the server is run in these scripts `nodemon` is used in place of `node` for easier development. If you are interested in how this works follow the nodemon In the project directory, you can run:
+    1. npm init -y
+        this creates package.json file
+        
+    2. npm install express mongoose cors nodemon
+        this installs these packages
+        
+    3. Create index.js file, this will contain all connection information
+    
+    4. Create user.js in models folder this will create or fetch user
+    
+    5. User thunderclient a visual studio extension for verifying connection right from visual studio
+  
+###### 4.  CLIENT
 
-### `npm run-script dev`
+    1. npx create-react-app .
+        Just like regular react project use this to create default react files
+  
+### Screenshots
 
-Runs both the client app and the server app in development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view the client in the browser.
-
-### `npm run-script client`
-
-Runs just the client app in development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view the client in the browser.
-
-
-### `npm run-script server`
-
-Runs just the server in development mode.<br>
-
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-If deploying to heroku this does not need to be run since it is handled by the heroku-postbuild script<br>
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
-## File structure
-#### `client` - Holds the client application
-- #### `public` - This holds all of our static files
-- #### `src`
-    - #### `assets` - This folder holds assets such as images, docs, and fonts
-    - #### `components` - This folder holds all of the different components that will make up our views
-    - #### `views` - These represent a unique page on the website i.e. Home or About. These are still normal react components
-    - #### `App.js` - This is what renders all of our browser routes and different views
-    - #### `index.js` - This is what renders the react app by rendering App.js, should not change
-- #### `package.json` - Defines npm behaviors and packages for the client
-#### `server` - Holds the server application
-- #### `config` - This holds our configuration files, like mongoDB uri
-- #### `controllers` - These hold all of the callback functions that each route will call
-- #### `models` - This holds all of our data models
-- #### `routes` - This holds all of our HTTP to URL path associations for each unique url
-- #### `tests` - This holds all of our server tests that we have defined
-- #### `server.js` - Defines npm behaviors and packages for the client
-#### `package.json` - Defines npm behaviors like the scripts defined in the next section of the README
-#### `.gitignore` - Tells git which files to ignore
-#### `README` - This file!
-
-## Learn More
-To learn how to setup a local MongoDB instance for testing, check out how to [connect to MongoDB](https://docs.mongodb.com/guides/server/drivers/).
-
-To learn how to deploy a full-stack web app to heroku, check out [this great guide](https://daveceddia.com/deploy-react-express-app-heroku/).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/76637730/174518969-fca0e177-0261-430a-bb22-590b41b5c4e2.png)
